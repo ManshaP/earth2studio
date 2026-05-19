@@ -49,6 +49,7 @@ o(x) = \frac{p_\text{unguided}(x)}{p_\text{guided}(x)} = \exp(\log o(x))
 $$
 
 This is what enables importance sampling: generate more samples in the rare-event region, then reweight them to estimate their likelihood under the original climate distribution.
+
 $$
 p_{IS}(TC) \approx \frac{1}{K} \sum_{i=1}^K \mathbb{I}_{TC}(x_i) o(\mathbf{x}_i) , \hspace{20pt} where \ \ x_i\sim p_{\text{guided}}
 $$ 
