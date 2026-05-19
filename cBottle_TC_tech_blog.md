@@ -82,7 +82,7 @@ The output, `guided_sample`, contains the generated atmospheric state.
 
 This makes it straightforward to extract variables such as 10-meter zonal wind, mean sea-level pressure, or other generated fields for analysis and visualization. The example plots the 10-meter zonal wind component, `u10m`, over a Caribbean domain (Fig. 1). This visualization helps verify that the generated state contains coherent tropical cyclone-like wind structure near the requested location.
 
-![Fig1](/home/pmanshausen/earth2studio/guided_sample.png)
+![Fig1](guided_sample.png)
 
 ## Computing the log-odds ratio
 
