@@ -37,18 +37,21 @@ $$
 The log-odds ratio is:
 
 $$
-\log r(x) = \log p_\text{guided}(x) - \log p_\text{unguided}(x)
+\log o(x) = \log p_\text{unguided}(x) - \log p_\text{guided}(x)
 $$
 
-This value quantifies how much more likely the sample is under the guided model than under the base model.
+This value quantifies how much less likely the sample is under the unguided model than under the guided model.
 
 For estimating probabilities under the unguided distribution using guided samples, the corresponding importance weight is:
 
 $$
-w(x) = \frac{p_\text{unguided}(x)}{p_\text{guided}(x)} = \exp(-\log r(x))
+o(x) = \frac{p_\text{unguided}(x)}{p_\text{guided}(x)} = \exp(\log o(x))
 $$
 
 This is what enables importance sampling: generate more samples in the rare-event region, then reweight them to estimate their likelihood under the original climate distribution.
+$$
+p_{IS}(TC) \approx \frac{1}{K} \sum_{i=1}^K \mathbb{I}_{TC}(x_i) o(\mathbf{x}_i) , \hspace{20pt} where \ \ x_i\sim p_{\text{guided}}
+$$ 
 
 ## Running guided tropical cyclone sampling in Earth2Studio
 
